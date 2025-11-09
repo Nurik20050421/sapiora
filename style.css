@@ -1,0 +1,133 @@
+/* style.css - clean, modern design for the Sapiora MVP site */
+
+/* Basic settings */
+:root{
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --primary: #1a52a1;    /* deep blue */
+  --accent: #007bff;     /* brighter accent */
+  --muted: #6b7280;
+  --radius: 10px;
+  --max-width: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#0f1724;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* Container to center content */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:28px;
+}
+
+/* Header */
+.site-header{
+  background:linear-gradient(90deg,#ffffffcc, #f3f6fbcc);
+  border-bottom:1px solid rgba(15,23,36,0.05);
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.brand{display:flex;gap:12px;align-items:center}
+.logo-mark{
+  width:52px;height:52px;border-radius:10px;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;
+  box-shadow:0 6px 18px rgba(26,82,161,0.14);
+}
+.brand-text h1{margin:0;font-size:18px}
+.tagline{margin:0;font-size:12px;color:var(--muted)}
+
+/* Nav */
+.nav{display:flex;gap:14px;align-items:center}
+.nav-link{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px}
+.nav-link:hover{background:rgba(26,82,161,0.06);color:var(--primary)}
+.nav-cta{background:var(--primary);color:white;padding:8px 14px;border-radius:8px;text-decoration:none}
+.nav-cta:hover{opacity:0.95}
+
+/* HERO */
+.hero{padding:36px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:26px;align-items:start}
+.hero-left h2{font-size:28px;margin:0 0 12px}
+.lead{color:var(--muted);margin:0 0 18px}
+.hero-actions{display:flex;gap:12px;margin-bottom:14px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.btn-primary{background:var(--primary);color:white}
+.btn-outline{border:1px solid rgba(15,23,36,0.08);background:transparent;color:var(--primary)}
+.btn-secondary{background:#eaf2ff;color:var(--primary)}
+.centered{text-align:center;margin-top:22px}
+
+/* Hero right card */
+.card{
+  background:var(--card);
+  padding:18px;border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(12, 20, 35, 0.06);
+}
+.card-title{margin:0 0 12px;font-size:16px;color:var(--primary)}
+.mini-stats{display:flex;gap:14px;margin-top:12px}
+.mini-stats .stat-title{font-size:12px;color:var(--muted)}
+.mini-stats .stat-value{font-size:14px;font-weight:700;color:#0f1724}
+
+/* Services preview */
+.section-title{font-size:22px;margin-bottom:6px}
+.section-sub{color:var(--muted);margin-bottom:18px}
+.cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.feature-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,20,35,0.04);text-align:left}
+.feature-icon{font-size:24px;color:var(--primary);margin-bottom:8px}
+
+/* layouts */
+.services-preview{padding:28px 0}
+.case{padding:22px 0}
+.case-grid{display:flex;gap:18px;align-items:center}
+.case-text{flex:1}
+.case-image{flex:1;display:flex;align-items:center;justify-content:center}
+
+/* CTA */
+.cta{padding:26px 0;background:linear-gradient(90deg,#f8fbff,#ffffff);}
+.cta-inner{text-align:center;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,20,35,0.03)}
+
+/* About and services lists */
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+.card h3{margin-top:0}
+
+/* Contact form */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+.contact-form{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,20,35,0.04)}
+.contact-form label{display:block;font-weight:600;margin:12px 0 6px}
+.contact-form input, .contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefb;background:#fbfdff}
+.form-actions{display:flex;gap:10px;margin-top:12px;align-items:center}
+.hint{font-size:12px;color:var(--muted);margin-top:10px}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(15,23,36,0.04);padding:18px 0;margin-top:36px}
+.footer-grid{display:flex;justify-content:space-between;align-items:center}
+
+/* Responsive */
+@media (max-width:960px){
+  .cards-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .case-grid{flex-direction:column}
+}
+@media (max-width:640px){
+  .cards-grid{grid-template-columns:1fr}
+  .brand-text h1{font-size:16px}
+  .hero-left h2{font-size:20px}
+}

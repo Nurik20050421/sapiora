@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sapiora — Data to Decisions | MVP</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js CDN for demo chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Icons (simple) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Bx7QJ+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-mark">S</div>
+        <div class="brand-text">
+          <h1>Sapiora</h1>
+          <p class="tagline">Transforming data into growth and efficiency</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h2>Analytics & ML for Kazakhstan companies — without the heavy lift</h2>
+          <p class="lead">
+            Sapiora helps SMEs and enterprises turn raw data from 1C, CRM, ERP, Ads, and Excel into actionable insights —
+            dashboards, forecasts, automated reports and training, all tailored to your business.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="services.html">See Services</a>
+            <a class="btn btn-outline" href="contact.html">Book a Demo</a>
+          </div>
+
+          <ul class="benefits">
+            <li><i class="fa-solid fa-check"></i> Pay-per-project or subscription</li>
+            <li><i class="fa-solid fa-check"></i> No heavy in-house hiring</li>
+            <li><i class="fa-solid fa-check"></i> Local support & training</li>
+          </ul>
+        </div>
+
+        <aside class="hero-right card">
+          <h3 class="card-title">Live demo — Sales Forecast</h3>
+          <canvas id="salesChart" width="400" height="250"></canvas>
+          <div class="mini-stats">
+            <div>
+              <div class="stat-title">Predicted next month</div>
+              <div class="stat-value">+12.6%</div>
+            </div>
+            <div>
+              <div class="stat-title">Data sources</div>
+              <div class="stat-value">CRM, POS, Ads</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section class="container services-preview">
+      <h2 class="section-title">What we do</h2>
+      <p class="section-sub">Analytics & machine learning services tailored for local business needs.</p>
+
+      <div class="cards-grid">
+        <article class="feature-card">
+          <i class="fa-solid fa-chart-line feature-icon"></i>
+          <h4>Interactive Dashboards</h4>
+          <p>Custom dashboards with KPIs and filters so you always know where the business stands.</p>
+        </article>
+
+        <article class="feature-card">
+          <i class="fa-solid fa-link feature-icon"></i>
+          <h4>Data Integration</h4>
+          <p>Connect 1C, ERP, CRM, Excel, Ads and POS (iiko) for a single source of truth.</p>
+        </article>
+
+        <article class="feature-card">
+          <i class="fa-solid fa-robot feature-icon"></i>
+          <h4>Predictive Models</h4>
+          <p>Sales forecasting, churn prediction, demand planning and anomaly detection using ML.</p>
+        </article>
+
+        <article class="feature-card">
+          <i class="fa-solid fa-gears feature-icon"></i>
+          <h4>Automation</h4>
+          <p>Scheduled report generation and workflow automation to save time for your team.</p>
+        </article>
+      </div>
+
+      <div class="centered">
+        <a class="btn btn-secondary" href="services.html">Explore all services</a>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO / CASE STUDY SAMPLE -->
+    <section class="case container">
+      <div class="case-grid">
+        <div class="case-text">
+          <h2>Sample case: Retail Chain Sales Forecast</h2>
+          <p>
+            We built a sales forecast dashboard for a local retail chain — combined POS, CRM and advertising data
+            into one dashboard; improved stocking accuracy and reduced stockouts by 18%.
+          </p>
+          <a class="link" href="services.html">Read more</a>
+        </div>
+        <div class="case-image card">
+          <!-- placeholder graphic -->
+          <svg width="100%" height="180" viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="dashboard placeholder">
+            <rect x="0" y="0" width="600" height="180" rx="8" fill="#f3f6fb"/>
+            <rect x="24" y="28" width="170" height="22" rx="4" fill="#e6eefb"/>
+            <rect x="220" y="28" width="330" height="22" rx="4" fill="#e6eefb"/>
+            <rect x="24" y="70" width="520" height="18" rx="4" fill="#ffffff" />
+            <rect x="24" y="95" width="120" height="48" rx="4" fill="#d8e8ff" />
+            <rect x="156" y="95" width="120" height="48" rx="4" fill="#cfe5ff" />
+            <rect x="288" y="95" width="120" height="48" rx="4" fill="#bfe0ff" />
+            <rect x="420" y="95" width="120" height="48" rx="4" fill="#dfeaff" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta container">
+      <div class="cta-inner">
+        <h3>Ready to try Sapiora for your business?</h3>
+        <p>Book a demo or upload a sample dataset — we’ll show you the value in one week.</p>
+        <a href="contact.html" class="btn btn-primary">Request Demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Sapiora</strong>
+        <p>Data analytics & ML services — Kazakhstan</p>
+      </div>
+      <div>
+        <p>Email: <a href="mailto:info@sapiora.kz">info@sapiora.kz</a></p>
+        <p>Follow: <a href="#" aria-label="LinkedIn">LinkedIn</a> · <a href="#" aria-label="Instagram">Instagram</a></p>
+      </div>
+      <div class="small">© Sapiora 2025 — MVP for university project</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

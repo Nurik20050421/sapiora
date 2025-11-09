@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Sapiora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-mark">S</div>
+        <div class="brand-text"><h1>Sapiora</h1><p class="tagline">Data to Decisions</p></div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section contact-section">
+      <h2 class="section-title">Get in touch</h2>
+      <p class="section-sub">Share your project brief or upload a sample CSV — we’ll reply within 48 hours (MVP promise).</p>
+
+      <div class="contact-grid">
+        <form id="contactForm" class="contact-form" action="mailto:info@sapiora.kz" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" placeholder="Company (optional)">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell us about your data or idea..." required></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="button" id="demoUploadBtn" class="btn btn-outline">Upload Sample CSV</button>
+          </div>
+
+          <p class="hint">Tip: attach a small CSV that represents your sales or transactions — we can show a prototype dashboard faster.</p>
+        </form>
+
+        <aside class="contact-info card">
+          <h3>Contact details</h3>
+          <p><strong>Email:</strong> <a href="mailto:info@sapiora.kz">info@sapiora.kz</a></p>
+          <p><strong>Phone:</strong> +7 (700) 000 0000 (placeholder)</p>
+          <p><strong>Location:</strong> Almaty, Kazakhstan</p>
+          <div class="support-hours">
+            <p><strong>Support:</strong> Mon–Fri, 9:00–18:00</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Sapiora</strong><p>Analytics & ML — Kazakhstan</p></div>
+      <div><p>Email: <a href="mailto:info@sapiora.kz">info@sapiora.kz</a></p></div>
+      <div class="small">© Sapiora 2025 — MVP</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
