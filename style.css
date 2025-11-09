@@ -419,37 +419,84 @@ body{
   background-color: #1f3f7f;
 }
 
-/* Full-page hero slides */
-.hero-slide {
-  min-height: 100vh; /* full viewport height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 4rem 20px;
-  color: #fff;
+.hero-carousel {
+  position: relative;
   background: linear-gradient(135deg, #0b1e3b, #1f3f7f);
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.hero-slide:nth-child(2) {
-  background: linear-gradient(135deg, #1f3f7f, #0b3f5f);
+.carousel-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.hero-slide:nth-child(3) {
-  background: linear-gradient(135deg, #0b3f5f, #0b1e3b);
+.carousel-slide {
+  display: none;
+  animation: fade 0.8s ease-in-out;
 }
 
-.hero-buttons { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.carousel-slide.active {
+  display: block;
+}
 
-.hero-list {
-  list-style-type: disc;
-  margin: 1.5rem 0 0 0;
-  padding-left: 20px;
-  text-align: left;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1rem;
-  line-height: 1.5;
+.hero-carousel h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.carousel-btn.prev {
+  left: 20px;
+}
+
+.carousel-btn.next {
+  right: 20px;
+}
+
+/* Animation */
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.btn-primary {
+  background-color: #0C63E4;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #0a4fbf;
 }
