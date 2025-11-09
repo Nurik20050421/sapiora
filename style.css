@@ -463,90 +463,30 @@ body{
   margin-top: 8px;
 }
 
-/* Services Hero Section */
 .services-hero {
-  background: linear-gradient(135deg, #1f3f7f, #0b1e3b); /* Gradient background */
+  background: linear-gradient(135deg, #0b1e3b, #1f3f7f);
   color: #ffffff;
   text-align: center;
-  padding: 80px 20px; /* top/bottom padding */
+  padding: 100px 20px;
   border-radius: 12px;
   margin-bottom: 50px;
-  position: relative;
-  overflow: hidden;
 }
 
-.services-hero h2 {
-  font-size: 2.5rem;
+.services-hero .hero-content h2 {
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 20px;
-  line-height: 1.2;
 }
 
 .services-hero .section-sub {
   font-size: 1.2rem;
-  max-width: 750px;
-  margin: 0 auto 30px auto;
+  max-width: 700px;
+  margin: 0 auto 25px auto;
   line-height: 1.6;
   opacity: 0.9;
 }
 
-.services-hero .hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
 .services-hero .hero-buttons a {
   display: inline-block;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-/* Primary CTA */
-.services-hero .btn-primary {
-  background-color: #0C63E4;
-  color: #fff;
-}
-
-.services-hero .btn-primary:hover {
-  background-color: #094bb0;
-  transform: translateY(-3px);
-}
-
-/* Secondary CTA */
-.services-hero .btn-secondary {
-  background: transparent;
-  border: 2px solid #14B8A6;
-  color: #14B8A6;
-}
-
-.services-hero .btn-secondary:hover {
-  background-color: #14B8A6;
-  color: #fff;
-  transform: translateY(-3px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .services-hero h2 {
-    font-size: 2rem;
-  }
-
-  .services-hero .section-sub {
-    font-size: 1rem;
-  }
-
-  .services-hero .hero-buttons {
-    flex-direction: column;
-  }
-
-  .services-hero .hero-buttons a {
-    width: 80%;
-    text-align: center;
-  }
+  margin: 10px 10px;
 }
